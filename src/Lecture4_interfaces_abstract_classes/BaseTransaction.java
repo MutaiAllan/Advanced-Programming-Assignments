@@ -5,9 +5,9 @@ import org.jetbrains.annotations.NotNull;
 import java.util.Calendar;
 
 public abstract class BaseTransaction implements TransactionInterface {
-    private final int amount;
-    private final Calendar date;
-    private final String transactionID;
+    private double amount;
+    private Calendar date;
+    private String transactionID;
 
     /**
      * Lecture1_adt.TransactionInterface Constructor
@@ -17,19 +17,20 @@ public abstract class BaseTransaction implements TransactionInterface {
      * Instialises the field, attributes of a transaction
      * Creates a object of this
      */
-    public BaseTransaction(int amount, @NotNull Calendar date)  {
+    public BaseTransaction(double amount, Calendar date, String transactionID) {
         this.amount = amount;
-        this.date = (Calendar) date.clone();
-        int uniq = (int) Math.random()*10000;
-        transactionID = date.toString()+uniq;
+        this.date = date;
+        this.transactionID = transactionID;
     }
 
     /**
      * getAmount()
-     * @return integer
+     * Method to get the transaction amount
+     * @return double
      */
+    @Override
     public double getAmount() {
-        return amount; // Because we are dealing with Value types we need not worry about what we return
+        return amount;
     }
 
     /**
