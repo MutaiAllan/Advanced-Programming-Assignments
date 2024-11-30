@@ -35,27 +35,26 @@ Aim: Creating a concrete class that implements an interface.
 You will create a class called BaseTransaction that implements the TransactionInterface .
 The class should have the same fields implemented in the abstract BaseTransaction
 class. Be careful to implement all the abstract methods defined in the interface.
-Implement the following methods:
+Implement the following methods:<br>
 – getAmount(): double - // Method to get the transaction amount<br>
 – getDate(): Calendar - // Method to get the transaction date<br>
 – getTransactionID(): String - // Method to get a unique identifier
-for the transaction
-Implement common Transaction methods:
+for the transaction<br>
+Implement common Transaction methods:<br>
 – printTransactionDetails(): void – A method to print out details
-of the transaction.
+of the transaction.<br>
 – apply(BankAccount ba): void – A method that applies this transaction on a Bank account object passed as a parameter. Ensure the implementation of this apply() method in the BaseTransaction class differs
 substantially from the implementations in both the DepositTransaction
-and the WithdrawalTransaction classes.
-Implement method overriding in the Derived Classes:
+and the WithdrawalTransaction classes.<br>
+Implement method overriding in the Derived Classes:<br>
 – Modify the implementations of DepositTransaction and WithdrawalTransaction
 classes to override the definition of the apply() method inherited from
-the BaseTransaction class.
+the BaseTransaction class.<br>
 – Ensure to implement specifications for all methods defined in the BaseTransaction
-class
+class<br>
 
 
-## Question 2 - Differentiate functionality of DepositTransaction
-and WithdrawalTransaction
+## Question 2 - Differentiate functionality of DepositTransactionand WithdrawalTransaction
 For this course, we shall differentiate the behavior of the two subclasses by making one design assumption: that all deposits are irreversible and withdrawals
 can be reversed.
 Implement the reverse(): boolean method to reverse a WithdrawalTransaction .
@@ -68,17 +67,17 @@ transaction was initially applied to is restored to it’s original amount.
 Write an exception handling class named InsufficientFundsException to
 handle errors that may occur during transactions on the bank account. Use
 knowledge of inheritance to ensure that this class is an actual Java Exception
-class.
+class.<br>
 – Use the throws keyword to handle the exceptions that occur when attempting a withdrawal in the apply() method in the WithdrawalTransaction
-class.
+class.<br>
 – Implement an overloaded apply() method in WithdrawalTransaction
 class that not only checks if the balance in the BankAccount covers the
 withdrawal amount but checks if the balance is greater than 0; in case
 the case when 0 < balance < withdrawal amount , it withdraws all the
-balance in the BankAccount and keeps a record of the amount not withdrawn.
+balance in the BankAccount and keeps a record of the amount not withdrawn.<br>
 – Within the definition of the available balance withdrawal method defined
 above, implement exception handling using the try{...} catch{...} final{...}
-block
+block<br>
 
 
 ## Question 4 - Writing the Client Code
@@ -94,16 +93,16 @@ the apply() method of the base class object.
 ## Grading Criteria
 # Correctness
 – Does the implementation follow the OOP principles of abstraction and
-interface implementation?
-– Does the BaseTransaction class correctly implement Transaction interface ?
-– Does the code handle exceptions correctly when insufficient funds exist?
+interface implementation?<br>
+– Does the BaseTransaction class correctly implement Transaction interface ?<br>
+– Does the code handle exceptions correctly when insufficient funds exist?<br>
 3
 # Code Quality
-– Is the code well-structured and documented?
-– Are the methods logically named and implemented according to the problem statement?
+– Is the code well-structured and documented?<br>
+– Are the methods logically named and implemented according to the problem statement?<br>
 # Functionality
-– Does the program perform credit and debit transactions as expected?
-– Does the program properly print transaction details after each operation?
+– Does the program perform credit and debit transactions as expected?<br>
+– Does the program properly print transaction details after each operation?<br>
 # Exception Handling
 Is the InsufficientFundsException properly thrown and handled in the program?
 4
