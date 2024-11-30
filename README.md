@@ -36,8 +36,8 @@ You will create a class called BaseTransaction that implements the TransactionIn
 The class should have the same fields implemented in the abstract BaseTransaction
 class. Be careful to implement all the abstract methods defined in the interface.
 Implement the following methods:
-– getAmount(): double - // Method to get the transaction amount
-– getDate(): Calendar - // Method to get the transaction date
+– getAmount(): double - // Method to get the transaction amount<br>
+– getDate(): Calendar - // Method to get the transaction date<br>
 – getTransactionID(): String - // Method to get a unique identifier
 for the transaction
 Implement common Transaction methods:
