@@ -51,6 +51,15 @@ public abstract class BaseTransaction implements TransactionInterface {
         return  transactionID;
     }
     // Method to print a transaction receipt or details
-    public abstract void printTransactionDetails();
-    public abstract void apply(BankAccount ba);
+    @Override
+    public void printTransactionDetails() {
+        System.out.println("transaction id: " + transactionID);
+        System.out.println("transaction date: " + date.getTime());
+        System.out.println("transaction amount: " + amount);
+    }
+
+    // A method that applies this transaction on a Bank account object passed as a parameter
+    public void apply(BankAccount ba) throws InsufficientFundsException {
+        ba.deposit(amount);
+    }
 }
