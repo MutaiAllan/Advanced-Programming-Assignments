@@ -35,14 +35,18 @@ public abstract class BaseTransaction implements TransactionInterface {
 
     /**
      * getDate()
+     *  Method to get the transaction date
      * @return Calendar Object
      */
+    @Override
     public Calendar getDate() {
 //        return date;    // Because we are dealing with Reference types we need to judiciously copy what our getters return
-        return (Calendar) date.clone(); // Defensive copying or Judicious Copying
+        //return (Calendar) date.clone(); // Defensive copying or Judicious Copying
+        return date;
     }
 
     // Method to get a unique identifier for the transaction
+    @Override
     public String getTransactionID(){
         return  transactionID;
     }
